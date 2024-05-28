@@ -93,9 +93,7 @@ export default function ContactForm() {
 
         <a
           className="flex justify-center items-center gap-3 w-full border-color-primary focus:border-white border-2 active:scale-90 hover:scale-95 transition-all text-white text-sm py-2 px-6 rounded-md cursor-pointer"
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://wa.link/fknvmv"
         >
           <span className="block">WhatsApp</span>
           <Icon
