@@ -1,0 +1,44 @@
+<div id="container" class="w-fit h-fit -z-10">
+  <h1
+    class="bg-color-quaternary relative block w-max mx-auto px-5 py-1 rounded-sm text-md uppercase font-bold"
+  >
+    <slot />
+  </h1>
+</div>
+
+<style>
+  @media screen and (min-width: 768px) {
+    div {
+      rotate: -90deg;
+    }
+    h1::after {
+      display: none !important;
+    }
+  }
+
+  h1::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    z-index: -10;
+  }
+
+  h1::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    z-index: -10;
+  }
+</style>

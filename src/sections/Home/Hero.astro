@@ -1,0 +1,76 @@
+---
+import PrimaryAnchor from "@/components/UI/PrimaryAnchor.astro"
+import SecondaryAnchor from "@/components/UI/SecondaryAnchor.astro"
+import SectionTitle from "@/components/UI/SectionTitle.astro"
+import { Icon } from "astro-icon/components"
+---
+
+<section class="h-screen">
+  <div
+    class="flex flex-col md:flex-row-reverse items-center justify-center md:justify-end md:max-w-[70%] mx-auto h-[90%] px-3"
+  >
+    <article class="flex flex-col gap-3 text-center md:text-start">
+      <div class="flex flex-col gap-1">
+        <h3 class="text-sm text-color-primary font-regular">
+          Hola usuario, soy...
+        </h3>
+        <h1 class="text-lg text-white font-bold uppercase">Miguel Terán</h1>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h2 class="text-md text-color-primary font-bold">
+          FullStack Developer
+        </h2>
+
+        <ul class="text-white text-sm md:flex md:gap-3">
+          <li class="md:text-sm max-md:hidden">🟢</li>
+          <li>Web developer</li>
+          <li class="md:text-sm max-md:hidden">🟢</li>
+          <li>Programmer</li>
+          <li class="md:text-sm max-md:hidden">🟢</li>
+          <li>Software Engineer</li>
+        </ul>
+      </div>
+
+      <div class="flex gap-3 justify-center md:justify-start mt-4">
+        <PrimaryAnchor to="/contact">Contáctame</PrimaryAnchor>
+        <SecondaryAnchor to="/portfolio">Portafolio</SecondaryAnchor>
+      </div>
+    </article>
+
+    <div
+      class="flex flex-col-reverse md:flex-col items-center mt-8 md:mr-4 md:mb-14"
+    >
+      <ul class="flex md:flex-col gap-3 mt-3 pt-2 md:pb-24">
+        <li>
+          <a
+            href="https://github.com/MiguelT18"
+            target="_blank"
+            rel="noopener norreferrer"
+          >
+            <Icon name="mdi:github" width={30} height={30} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/miguelterann01?igsh=MWZrN3Bqem54MXRvaQ=="
+            target="_blank"
+            rel="noopener norreferrer"
+          >
+            <Icon name="mdi:instagram" width={30} height={30} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@miguel_terann?_t=8mcg76fX2lK&_r=1"
+            target="_blank"
+            rel="noopener norreferrer"
+          >
+            <Icon name="ic:baseline-tiktok" width={30} height={30} />
+          </a>
+        </li>
+      </ul>
+      <SectionTitle>Sígueme</SectionTitle>
+    </div>
+  </div>
+</section>

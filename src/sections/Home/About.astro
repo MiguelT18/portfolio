@@ -1,0 +1,35 @@
+---
+import SectionTitle from "@/components/UI/SectionTitle.astro"
+import MyPhoto from "@/public/images/profile-picture.jpg"
+import { Image } from "astro:assets"
+---
+
+<section class="mx-4 mb-32">
+  <div
+    class="w-full md:max-w-[70%] mx-auto md:flex md:gap-x-32 md:flex-row-reverse md:items-center"
+  >
+    <div
+      class="flex flex-col-reverse md:flex-row-reverse items-center justify-center"
+    >
+      <SectionTitle>Sobre mí</SectionTitle>
+      <Image
+        src={MyPhoto}
+        alt={"This is me in La Paz :)"}
+        width={240}
+        height={240}
+        class={"block rounded-xl max-md:mb-8"}
+      />
+    </div>
+    <p
+      class="block w-full max-w-[520px] md:max-w-[50%] max-md:mx-auto text-sm text-white text-center md:text-start mt-6 mr-10"
+    >
+      Soy un programador freelance y también me dedico al desarrollo de
+      aplicaciones web que sean adaptables para todos los dispositivos. La base
+      de mis habilidades se basa en JavaScript y me encanta usarlo para casi
+      todos los proyectos en los que trabajo, en especial para los sitios web.
+      Comencé en el desarrollo de aplicaciones web desde el año 2020 y hasta
+      ahora vengo mejorando mis habilidades y expandiendo mis conocimientos para
+      poder ofrecerte un producto final de mejor calidad.
+    </p>
+  </div>
+</section>

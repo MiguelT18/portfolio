@@ -1,0 +1,11 @@
+---
+import SectionTitle from "../components/UI/SectionTitle.astro"
+import ContactForm from "@/components/UI/ContactForm.tsx"
+---
+
+<section
+  class="w-full md:max-w-[70%] py-28 px-6 mx-auto flex max-md:flex-col-reverse max-md:gap-8 items-center justify-between"
+>
+  <ContactForm client:visible />
+  <SectionTitle> Contáctame </SectionTitle>
+</section>
