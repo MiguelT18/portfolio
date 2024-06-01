@@ -13,11 +13,6 @@ export default function ContactForm() {
     email: "",
     message: "",
   })
-  const [errors, setErrors] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  })
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,7 +21,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [name]: value })
   }
 
-  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (form.current) {
@@ -47,7 +42,7 @@ export default function ContactForm() {
   return (
     <form
       ref={form}
-      onSubmit={sendEmail}
+      onSubmit={handleSubmit}
       className="text-black flex flex-col gap-4 w-full md:max-w-[60%] mx-auto"
     >
       <p className="text-sm text-white">
@@ -62,8 +57,8 @@ export default function ContactForm() {
         name="name"
         placeholder="Nombre completo"
         className="block px-4 py-2 rounded-lg bg-color-tertiary text-white border-2 border-color-primary"
-        required
       />
+
       <input
         onChange={handleChange}
         value={formData.email}
@@ -71,8 +66,8 @@ export default function ContactForm() {
         name="email"
         placeholder="Correo electrónico"
         className="block px-4 py-2 rounded-lg bg-color-tertiary text-white border-2 border-color-primary"
-        required
       />
+
       <textarea
         onChange={handleChange}
         value={formData.message}
@@ -80,7 +75,6 @@ export default function ContactForm() {
         rows={5}
         placeholder="Escribe el mensaje..."
         className="w-full block resize-none px-4 py-2 rounded-lg bg-color-tertiary text-white border-2 border-color-primary"
-        required
       ></textarea>
 
       <div className="flex gap-4 text-center">
