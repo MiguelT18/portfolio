@@ -1,5 +1,4 @@
 ---
-import PrimaryAnchor from "../UI/PrimaryAnchor.astro"
 import { Image } from "astro:assets"
 
 const { image, imageAlt, name, description, ref } = Astro.props
@@ -14,6 +13,13 @@ const { image, imageAlt, name, description, ref } = Astro.props
     <p class="text-sm">{description}</p>
   </div>
   <div class="px-4">
-    <PrimaryAnchor to={ref}>Ver proyecto</PrimaryAnchor>
+    <a
+      class="bg-color-primary/90 hover:bg-color-primary/60 hover:scale-95 text-white transition-all text-sm py-2 px-4 rounded-md cursor-pointer"
+      href={ref}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver proyecto
+    </a>
   </div>
 </article>

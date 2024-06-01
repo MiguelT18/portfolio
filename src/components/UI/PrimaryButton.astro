@@ -1,5 +1,9 @@
+---
+const { idButton } = Astro.props
+---
+
 <button
-  id="primary-button"
+  id={idButton}
   class="bg-color-primary/90 hover:bg-color-primary/60 focus:bg-color-primary/60 active:scale-90 hover:scale-95 text-white transition-all text-sm py-2 px-4 rounded-md"
 >
   <slot />
